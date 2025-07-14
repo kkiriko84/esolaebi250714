@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국어 문제 풀이 퀴즈</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>국어 문제 풀이 퀴즈</h1>
+        <div id="quiz-box">
+            <div id="question-number"></div>
+            <div id="question-text"></div>
+            <ul id="choices"></ul>
+            <button id="next-btn" disabled>다음 문제</button>
+        </div>
+        <div id="result-box" style="display:none;">
+            <h2>퀴즈 완료!</h2>
+            <p id="score"></p>
+            <button id="restart-btn">다시 시작</button>
+        </div>
+    </div>
+    <script src="question.js"></script>
+</body>
+</html>
