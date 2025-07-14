@@ -97,7 +97,14 @@ const restartBtn = document.getElementById('restart-btn');
 function loadQuestion() {
     const q = quizData[current];
     questionNumber.textContent = `문제 ${current + 1} / ${quizData.length}`;
-    questionText.textContent = q.question;
+    // 이미지가 필요한 문제(1,2번)만 이미지 태그 추가
+    let imgHtml = '';
+    if (current === 0) {
+        imgHtml = '<img src="images/01.png" alt="문제1 그림" style="max-width:100%;margin-bottom:12px;">';
+    } else if (current === 1) {
+        imgHtml = '<img src="images/02.png" alt="문제2 그림" style="max-width:100%;margin-bottom:12px;">';
+    }
+    questionText.innerHTML = imgHtml + q.question;
     choicesList.innerHTML = '';
     selected = null;
     nextBtn.disabled = true;
